@@ -1,0 +1,164 @@
+/********************************************
+COLORS
+
+light yellow: #faea9c
+medium yellow: #fcd42d
+dark yellow: #ddb908
+
+light grey fonts: dimgray
+grey fonts: #4d4d4d
+
+
+
+********************************************/
+
+
+
+
+
+
+/********************************************
+SITEWIDE STYLES
+********************************************/
+
+
+body {
+  color: #4d4d4d;
+  font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+}
+
+
+
+/********************************************
+HEADER
+********************************************/
+
+
+header h1 {
+  text-align: center;
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
+	font-weight: 500;
+  font-size: 3.3em;
+  margin:10px 0 5px;
+}
+
+header h1 span {
+  padding:0 6px;
+  color: #f6d42d;
+  font-size: 1.5em;
+  position: relative;
+  top:0.1em;
+}
+
+header h2 {
+  text-align: center;
+  margin:0;
+  font-weight:100;
+}
+
+
+/********************************************
+NAVIGATION
+********************************************/
+
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 15px;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display:inline;
+  font-size: 1.3em;
+  padding: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4d4d4d;
+  padding: 5px 15px;
+}
+
+nav ul li a:hover {
+  color:#f6d42d;
+}
+
+.selected {
+  border-bottom: 5px solid #f6d42d;
+}
+
+
+/********************************************
+FOOTER
+********************************************/
+
+
+footer {
+  width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+  text-align: center;
+  color:dimgray;
+}
+
+footer h1 {
+  margin:0;
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
+	font-weight: 500;
+  font-size: 1.5em;
+}
+
+footer h1 span {
+  padding:0 6px;
+  color: #faea9c;
+  font-size: 1.5em;
+  position: relative;
+  top:0.1em;
+}
+
+footer p {
+  margin:0 0 20px;
+  padding:0;
+}
+
+.line {
+  background-color: dimgray;
+  width: 100px;
+  height: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
