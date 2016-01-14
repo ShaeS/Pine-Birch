@@ -98,34 +98,6 @@ nav ul li a:hover {
 }
 
 
-/********************************************
-SELECT
-********************************************/
-
-.styled-select select {
-  background:transparent;
-  width: 268px;
-  padding: 5px;
-  font-size: 16px;
-  line-height: 1;
-  border: 0;
-  border-radius: 0;
-  height: 34px;
-  -webkit-appearance: none;
-  outline-color: #f6d42d;
-  
-}
-
-.styled-select {
-  width: 240px;
-  height: 34px;
-  overflow: hidden;
-  background: url(../assets/select_arrow.png) no-repeat right #f2f2f2;
-  border: 1px solid #ccc;
-  margin: 20px auto;
-}
-
-
 
 
 /********************************************
@@ -165,10 +137,61 @@ footer p {
 
 
 
+/********************************************
+INDEX PAGE
+********************************************/
+
+/********************************************
+SELECT
+********************************************/
+
+.styled-select select {
+  background:transparent;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+  outline-color: #f6d42d;
+  
+}
+
+.styled-select {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  background: url(../assets/select_arrow.png) no-repeat right #f2f2f2;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
 
 
 
+/********************************************
+IMAGE GALLERY
+********************************************/
 
+
+#imagegal ul {
+  width:70%;
+  margin:0;
+  padding:0;
+}
+
+#imagegal ul li {
+  border: 2px solid gray;
+  margin:0;
+  padding:0;
+}
+
+#imagegal ul li img {
+  width:100%;
+  margin:0;
+  padding:0;
+}
 
 
 
