@@ -56,6 +56,10 @@ header h2 {
   font-weight:100;
 }
 
+header hr {
+  width: 40%;
+}
+
 
 /********************************************
 NAVIGATION
@@ -68,7 +72,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 15px;
+  margin: 15px 0 30px;
   padding: 0;
 }
 
@@ -92,6 +96,36 @@ nav ul li a:hover {
 .selected {
   border-bottom: 5px solid #f6d42d;
 }
+
+
+/********************************************
+SELECT
+********************************************/
+
+.styled-select select {
+  background:transparent;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+  outline-color: #f6d42d;
+  
+}
+
+.styled-select {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  background: url(../assets/select_arrow.png) no-repeat right #f2f2f2;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+
 
 
 /********************************************
@@ -126,12 +160,6 @@ footer h1 span {
 footer p {
   margin:0 0 20px;
   padding:0;
-}
-
-.line {
-  background-color: dimgray;
-  width: 100px;
-  height: 2px;
 }
 
 
