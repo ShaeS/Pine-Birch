@@ -225,9 +225,39 @@ IMAGE GALLERY
 ABOUT PAGE
 ********************************************/
 
+#aboutsection {
+    width:70%;
+    margin:0 auto;
+    text-align: center;
+}
 
+.center {
+    text-align: center;
+}
 
+#contactimg {
+    width:80%;
+    padding-top:1%;
+    padding-bottom:1%;
+}
 
+.aboutinfo {
+   margin:0 auto;
+   text-align: center;
+   padding-left:5%;
+   padding-right:5%;
+   padding-bottom:1%;
+   padding-top:1%;
+}
+
+/********************************************
+CONTACT PAGE
+********************************************/
+
+#message {
+   width:43%;
+   height:275px;
+}
 
 
 
@@ -265,9 +295,22 @@ IMAGE GALLERY
   width:45%;
 }
   
+ /********************************************
+ABOUT PAGE
+********************************************/    
+
+  #aboutsection {
+  width:70%;
+  margin:0 auto;
+}
   
-  
-  
+   /********************************************
+CONTACT PAGE
+********************************************/    
+
+#message {
+   width:70%;
+}
   
   
 }
@@ -306,7 +349,25 @@ IMAGE GALLERY
   #imagewrapper ul li {
   width:95%;
 }
-  
+    
+ /********************************************
+ABOUT PAGE
+********************************************/    
+
+  #aboutsection {
+  width:100%;
+}
+  .aboutinfo {
+   width:80%;
+}
+
+ /********************************************
+CONTACT PAGE
+********************************************/    
+
+#message {
+   width:60%;
+}
   
   
 }
