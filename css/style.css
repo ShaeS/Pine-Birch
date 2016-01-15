@@ -222,6 +222,7 @@ ABOUT PAGE
 #aboutsection {
     width:70%;
     margin:0 auto;
+    text-align: center;
 }
 
 .center {
@@ -243,9 +244,14 @@ ABOUT PAGE
    padding-top:1%;
 }
 
+/********************************************
+CONTACT PAGE
+********************************************/
 
-
-
+#message {
+   width:43%;
+   height:275px;
+}
 
 
 
@@ -292,8 +298,13 @@ ABOUT PAGE
   margin:0 auto;
 }
   
-  
-  
+   /********************************************
+CONTACT PAGE
+********************************************/    
+
+#message {
+   width:70%;
+}
   
   
 }
@@ -337,7 +348,14 @@ ABOUT PAGE
   .aboutinfo {
    width:80%;
 }
-  
+
+ /********************************************
+CONTACT PAGE
+********************************************/    
+
+#message {
+   width:60%;
+}
   
   
 }
