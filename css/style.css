@@ -207,8 +207,8 @@ IMAGE GALLERY
 }
 
 #imagewrapper ul li img {
-  border: 2px solid #c7c6c6;
-  width:310px;
+  border: 2px solid #efefef;
+  width:240px;
   margin:0;
   padding:0;
   box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.15);
@@ -217,6 +217,20 @@ IMAGE GALLERY
 #imagewrapper ul li img:hover {
   box-shadow: none;
   opacity:0.4;
+}
+
+#imagewrapper ul li div {
+  background-color:#efefef;
+  padding-bottom: 5px;
+}
+
+#imagewrapper ul li p {
+  text-align: center;
+  margin:3px;
+}
+
+#imagewrapper ul li hr {
+  width: 60%;
 }
 
 
