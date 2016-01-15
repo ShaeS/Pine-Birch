@@ -69,7 +69,7 @@ header h3 {
 }
 
 header hr {
-  width: 40%;
+  width: 50%;
 }
 
 
@@ -267,15 +267,41 @@ ABOUT PAGE
 CONTACT PAGE
 ********************************************/
 
+form {
+ width:450px;
+ margin:0 auto;
+}
+
 #message {
-   width:43%;
+   width:100%;
+   padding:0;
    height:275px;
 }
 
+label {
+line-height: 2;
+}
 
+#submit {
+    width:100.3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color:white;
+    background-color:black;
+    border-style:none;
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+}
 
-
-
+#submit:hover {
+    background-color:#4d4d4d;
+    -webkit-transition: all 300ms ease 0s;
+    -moz-transition: all 200ms ease 0s;
+    -ms-transition: all 200ms ease 0s;
+    -o-transition: all 200ms ease 0s;
+    transition: all 200ms ease 0s;
+}
 
 
 
@@ -315,13 +341,7 @@ ABOUT PAGE
    /********************************************
 CONTACT PAGE
 ********************************************/    
-
-#message {
-   width:70%;
-}
-  
-  
-}
+    
 
 
 /********************************************
@@ -369,10 +389,16 @@ ABOUT PAGE
  /********************************************
 CONTACT PAGE
 ********************************************/    
-
+    
 #message {
-   width:60%;
+   width:100%;
 }
-  
-  
+    
+form {
+ width:350px;   
+}
+    
+#submit {
+    width:100.3%;
+}
 }
