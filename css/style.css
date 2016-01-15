@@ -219,7 +219,26 @@ IMAGE GALLERY
 ABOUT PAGE
 ********************************************/
 
+#aboutsection {
+    width:70%;
+    margin:0 auto;
+}
 
+.center {
+    text-align: center;
+}
+
+#contactimg {
+    width:50%;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+
+.aboutinfo {
+   width:60%;
+   margin:0 auto;
+   text-align: center;
+}
 
 
 
