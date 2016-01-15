@@ -208,11 +208,17 @@ IMAGE GALLERY
 }
 
 #imagewrapper ul li img {
-  border: 2px solid gray;
+  border: 2px solid #c7c6c6;
   width:100%;
   margin:0;
   padding:0;
+  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.15);
 }
+
+#imagewrapper ul li img:hover {
+  box-shadow: none;
+}
+
 
 
 /********************************************
@@ -276,9 +282,15 @@ MEDIA QUERY 480px
 @media (max-width:30rem) {
   
   
+
   
+/********************************************
+NAV
+********************************************/
   
-  
+nav ul li {
+  padding: 0 8.5px;
+}
   
   
 /********************************************
