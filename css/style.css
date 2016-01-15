@@ -229,16 +229,21 @@ ABOUT PAGE
 }
 
 #contactimg {
-    width:50%;
+    width:80%;
     padding-top:1%;
     padding-bottom:1%;
 }
 
 .aboutinfo {
-   width:60%;
    margin:0 auto;
    text-align: center;
+   padding-left:5%;
+   padding-right:5%;
+   padding-bottom:1%;
+   padding-top:1%;
 }
+
+
 
 
 
@@ -278,6 +283,14 @@ IMAGE GALLERY
   width:45%;
 }
   
+ /********************************************
+ABOUT PAGE
+********************************************/    
+
+  #aboutsection {
+  width:70%;
+  margin:0 auto;
+}
   
   
   
@@ -312,6 +325,17 @@ IMAGE GALLERY
   
   #imagewrapper ul li {
   width:95%;
+}
+    
+ /********************************************
+ABOUT PAGE
+********************************************/    
+
+  #aboutsection {
+  width:100%;
+}
+  .aboutinfo {
+   width:80%;
 }
   
   
