@@ -22,9 +22,21 @@ SITEWIDE STYLES
 ********************************************/
 
 
+
 body {
   color: #4d4d4d;
   font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+}
+
+section {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.push {
+  height: 4em;
 }
 
 
@@ -107,9 +119,7 @@ FOOTER
 
 footer {
   width:100%;
-	position:absolute;
-	bottom:0;
-	left:0;
+	height: 4em;
   text-align: center;
   color:dimgray;
 }
@@ -175,26 +185,39 @@ IMAGE GALLERY
 ********************************************/
 
 
-#imagegal ul {
-  width:70%;
-  margin:0;
+
+#imagewrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#imagewrapper ul {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
   padding:0;
 }
 
-#imagegal ul li {
+#imagewrapper ul li {
+  list-style: none;
+  margin:10px 1%;
+  padding:0;
+  width:30%;
+  min-width:200px;
+}
+
+#imagewrapper ul li img {
   border: 2px solid gray;
-  margin:0;
-  padding:0;
-}
-
-#imagegal ul li img {
   width:100%;
   margin:0;
   padding:0;
 }
 
 
-
+/********************************************
+ABOUT PAGE
+********************************************/
 
 
 
