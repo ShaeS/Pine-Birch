@@ -189,27 +189,26 @@ IMAGE GALLERY
 #imagewrapper {
   width: 70%;
   margin: 0 auto;
-  max-width:1280px;
 }
 
 #imagewrapper ul {
   margin: 20px 0;
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-around;
+  justify-content:center;
   padding:0;
 }
 
-#imagewrapper ul li {
+#imagewrapper ul li { 
   list-style: none;
   margin:10px 1%;
   padding:0;
-  width:30%;
+  position:relative;
 }
 
 #imagewrapper ul li img {
   border: 2px solid #c7c6c6;
-  width:100%;
+  width:310px;
   margin:0;
   padding:0;
   box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.15);
@@ -217,7 +216,9 @@ IMAGE GALLERY
 
 #imagewrapper ul li img:hover {
   box-shadow: none;
+  opacity:0.4;
 }
+
 
 
 
@@ -226,28 +227,26 @@ ABOUT PAGE
 ********************************************/
 
 #aboutsection {
-    width:70%;
-    margin:0 auto;
-    text-align: center;
+  width:70%;
+  margin:0 auto;
+  text-align: center;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 #contactimg {
-    width:80%;
-    padding-top:1%;
-    padding-bottom:1%;
+  width:80%;
+  padding-top:1%;
+  padding-bottom:1%;
 }
 
 .aboutinfo {
-   margin:0 auto;
-   text-align: center;
-   padding-left:5%;
-   padding-right:5%;
-   padding-bottom:1%;
-   padding-top:1%;
+  margin:0 auto;
+  text-align: center;
+  padding: 1% 5%;
+  line-height: 2em;
 }
 
 /********************************************
@@ -277,7 +276,7 @@ MEDIA QUERY 768px
 ********************************************/
 
 
-@media (max-width:48rem) {
+@media screen and (max-width:48rem) {
   
   
   
@@ -290,10 +289,6 @@ IMAGE GALLERY
   width: 80%;
 }
   
-  
-  #imagewrapper ul li {
-  width:45%;
-}
   
  /********************************************
 ABOUT PAGE
@@ -322,7 +317,7 @@ MEDIA QUERY 480px
 
 
 
-@media (max-width:30rem) {
+@media screen and (max-width:30rem) {
   
   
 
@@ -346,9 +341,6 @@ IMAGE GALLERY
   width: 90%;
 }
   
-  #imagewrapper ul li {
-  width:95%;
-}
     
  /********************************************
 ABOUT PAGE
