@@ -189,6 +189,7 @@ IMAGE GALLERY
 #imagewrapper {
   width: 70%;
   margin: 0 auto;
+  max-width:1280px;
 }
 
 #imagewrapper ul {
@@ -204,7 +205,6 @@ IMAGE GALLERY
   margin:10px 1%;
   padding:0;
   width:30%;
-  min-width:200px;
 }
 
 #imagewrapper ul li img {
@@ -236,3 +236,65 @@ ABOUT PAGE
 
 
 
+/********************************************
+MEDIA QUERY 768px
+********************************************/
+
+
+@media (max-width:48rem) {
+  
+  
+  
+
+/********************************************
+IMAGE GALLERY
+********************************************/
+  
+  #imagewrapper {
+  width: 80%;
+}
+  
+  
+  #imagewrapper ul li {
+  width:45%;
+}
+  
+  
+  
+  
+  
+  
+}
+
+
+/********************************************
+MEDIA QUERY 480px
+********************************************/
+
+
+
+@media (max-width:30rem) {
+  
+  
+  
+  
+  
+  
+  
+/********************************************
+IMAGE GALLERY
+********************************************/
+  
+  
+  
+#imagewrapper {
+  width: 90%;
+}
+  
+  #imagewrapper ul li {
+  width:95%;
+}
+  
+  
+  
+}
