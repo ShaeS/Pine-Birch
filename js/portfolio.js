@@ -30,7 +30,5 @@ $("#imagewrapper ul li").click(function() {
   $(closebutton).click(function() {
     $(popupscreen).remove(); 
   });
-  $(popupscreen).click(function() {
-    $(popupscreen).remove(); 
-  });
+
 });

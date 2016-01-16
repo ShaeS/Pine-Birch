@@ -257,7 +257,6 @@ IMAGE GALLERY
 
 .popupitem {
   width:70%;
-  height:68vh;
   background-color:#fff;
   border: 5px solid #d3d3d3;
   display:flex;
@@ -267,7 +266,7 @@ IMAGE GALLERY
 }
 
 .popupimg {
-  height:100%;
+  width:40%;
 }
 
 .popuptextdiv {
@@ -351,6 +350,14 @@ form {
  margin:0 auto;
 }
 
+input {
+  outline-color: #f6d42d;
+}
+
+textarea {
+  outline-color: #f6d42d;
+}
+
 #message {
    width:100%;
    padding:0;
@@ -359,6 +366,7 @@ form {
 
 label {
 line-height: 2;
+font-weight:bold;
 }
 
 #submit {
@@ -426,23 +434,29 @@ IMAGE GALLERY
 }
   
 .popupscreen {
-  position:sticky;
-  margin: 50px;
+  position:fixed;
+  overflow-y: scroll;
+  align-items: flex-start;
 }
   
 .popupitem {
-  width:80%;
-  height:auto;
+  width:100%;
   flex-direction: column;
   padding-bottom: 40px;
+  top:0;
 }
   
 .popupimg {
-  width:60%;
+  width:50%;
 }
   
 .popupdescription {
   padding: 10px 0 40px;
+}
+  
+.closebutton {
+  right: 10px;
+  top: 5px;
 }
   
   
