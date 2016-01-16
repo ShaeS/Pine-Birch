@@ -263,6 +263,7 @@ IMAGE GALLERY
   display:flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .popupimg {
@@ -270,14 +271,48 @@ IMAGE GALLERY
 }
 
 .popuptextdiv {
-  width:60%;
-  background-color:aquamarine;
+  margin-right:8%;
+  width:50%;
   text-align: center;
 }
 
-.popuptitle {
-  
+.popupprice {
+  padding-bottom: 40px;
 }
+
+.popuphr {
+  width:50%;
+}
+
+.popupdescription {
+  line-height: 2em;
+  padding:10px 10% 40px;
+}
+
+.popupbutton {
+  color: #fcd42d;
+  text-decoration: none;
+}
+
+.popupbutton:hover {
+  color: #ddb908;
+  text-decoration: underline;
+}
+
+.closebutton {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  position:absolute;
+  right: -14px;
+  top: -28px;
+}
+
+.closebutton:hover {
+  cursor: pointer;
+  color: #fcd42d;
+}
+
 
 
 /********************************************
@@ -389,6 +424,27 @@ IMAGE GALLERY
   padding: 5px 0;
   position:static;
 }
+  
+.popupscreen {
+  position:sticky;
+  margin: 50px;
+}
+  
+.popupitem {
+  width:80%;
+  height:auto;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+  
+.popupimg {
+  width:60%;
+}
+  
+.popupdescription {
+  padding: 10px 0 40px;
+}
+  
   
  /********************************************
 ABOUT PAGE
