@@ -395,17 +395,19 @@ MY CART PAGE
 ********************************************/
 
 #carttable {
-   width:80%; 
+  margin:0 auto;
+  padding:2%;
+  border-collapse:separate;  
 }
 
 #cartimg {
-  width:12%; 
+    width:70px;
+    display: inline-block; 
 }
 
-#cartsection {
-  width:80%;       
+table th {
+     padding:0 60% 0 0;   
 }
-
 
 /********************************************
 MEDIA QUERY 768px
