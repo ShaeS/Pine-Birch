@@ -1072,6 +1072,17 @@ IMAGE GALLERY
   top: 5px;
 }
   
+#imagewrapper ul li:hover div { 
+  opacity:1;
+  cursor: pointer;
+}
+
+#imagewrapper ul li:hover img {
+  opacity:1;
+  cursor: pointer;
+}
+
+  
   
  /********************************************
 ABOUT PAGE
@@ -1147,7 +1158,7 @@ NAV
 ********************************************/
   
 nav ul li {
-  padding: 0 8.5px;
+  padding: 0 7px;
 }
   
   
