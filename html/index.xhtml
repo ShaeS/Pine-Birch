@@ -7,7 +7,10 @@
     <link rel="icon" type="image/png" href="../images/favicon.png"/>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animsition.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="./js/animsition.min.js"></script>
+    <script src="./js/main.js"></script>
   </head>
     
   <body>
@@ -15,17 +18,17 @@
         <headReplace metal:use-macro="head.xhtml/meta_head"></headReplace>
       <nav>
         <ul class="nav">
-          <li><a class="selected" href="index.php">store</a></li>
-          <li><a href="about.php">about</a></li>
-          <li><a href="contact.php">contact</a></li>
-          <li><a href="cart.php">cart</a></li>
+          <li><a class="selected animsition-link" href="index.php">store</a></li>
+          <li><a class="animsition-link" href="about.php">about</a></li>
+          <li><a class="animsition-link" href="contact.php">contact</a></li>
+          <li><a class="animsition-link" href="cart.php">cart</a></li>
         </ul>
       </nav>
       
     <hr/> 
     </header>
       
-    <section>
+    <section class="animsition">
       <div class="styled-select">
           <select>
             <option value="all">all</option>
