@@ -25,107 +25,29 @@
           </select>
       </div>
       <div id="itemcontainer">
-        <table>
-          <tr id="tableheaders">
-            <th></th>
-            <th>name</th>
-            <th>price</th>
-            <th>date added</th>
-            <th>stock</th>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td id="editcell"><img class="editbutton" src="./assets/edit.png" /></td>
-            <td>Jerry the Hedgehog</td>
-            <td>$51.00</td>
-            <td>01/15/16</td>
-            <td>13</td>
-          </tr>
+        <table id="getAdminProducts">
+          
+          
         </table>
       </div>
       
       <div class="push"></div>
     </section>
     <footer>
-        <a id="gotosite" href="../index.php" target="_blank">go to site</a><br/>
-        <a id="logout" href="../index.php">logout</a>
+        <a id="gotosite" href="./index.php" target="_blank">go to site</a><br/>
+        
+<!-- tal:condition="exists: isLoggedIn" -->
+
+      <div id="logoutFormContainer" tal:condition="php: Session::get('isLoggedIn')">
+
+        <form id="logoutForm">
+            <input id="logoutbutton" type="button" value="logout"/>
+            <input type="hidden" value="logout" name="logoutButton"/>
+        </form>
+
+      </div>
     </footer>
-    <script src="../js/admin.js"></script>
+    <script src="./js/adminproducts.js"></script>
+    <script src="./js/logging.js"></script>
   </body>
 </html>

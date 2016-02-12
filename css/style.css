@@ -349,13 +349,21 @@ ABOUT PAGE
 ********************************************/
 
 #aboutsection {
+  padding: 30px 0;
   width: 70%;
   margin: 0 auto;
-  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.center {
-  text-align: center;
+#aboutsection div {
+  
 }
 
 #contactimg {
@@ -366,7 +374,6 @@ ABOUT PAGE
 
 #aboutsection p {
   margin: 0 auto;
-  text-align: center;
   padding: 1% 5%;
   line-height: 2em;
 }
@@ -883,7 +890,24 @@ ADMIN LOGIN
   width: 250px;
 }
 
-#submitadmin {
+#loginbutton {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  background-color: #0d0d0d;
+  border-style: none;
+  border-radius: 2px;
+  margin-bottom:5px;
+}
+
+#loginbutton:hover {
+  background-color: #4d4d4d;
+  -webkit-transition: all 300ms ease 0s;
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+
+#resetLoginForm {
   padding-top: 1%;
   padding-bottom: 1%;
   color: white;
@@ -892,17 +916,38 @@ ADMIN LOGIN
   border-radius: 2px;
 }
 
-#submitadmin:hover {
+#resetLoginForm:hover {
   background-color: #4d4d4d;
   -webkit-transition: all 300ms ease 0s;
   -webkit-transition: all 200ms ease 0s;
   transition: all 200ms ease 0s;
 }
 
+#AJAXMessages {
+  padding: 20px 0;
+  font-weight:300;
+}
+
+#AJAXMessages li {
+  list-style: none;
+}
+
 
 /********************************************
 ADMIN PANEL
 ********************************************/
+
+#logoutbutton {
+  border: none;
+  background: none;
+  color: #fcd42d;
+  padding:0;
+}
+
+#logoutbutton:hover {
+  color: #ddb908;
+  text-decoration: underline;
+}
 
 #gotosite {
   color: #fcd42d;

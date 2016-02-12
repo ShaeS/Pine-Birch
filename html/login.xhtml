@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
-    <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
-    <link rel="icon" type="image/png" href="../images/favicon.png" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>PINE<span>&amp;</span>BIRCH</h1>
-      <h3>admin login</h3>
-    </header>
-    <section id="adminlogin">
-        <form action="adminpanel.html">
-            <label for='adminname'>username</label><br />
-            <input id='adminname' type='text' required="true" />
-            <br />
-            <br />
-            <label for='adminpassword'>password</label><br />
-            <input id='adminpassword' type='password' required="true" />
-            <br />
-            <br />
-            <input id='submitadmin' type="submit" value="Submit" />
-        </form>
 
-    </section>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
+  <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>PINE<span>&amp;</span>BIRCH</h1>
+    <h3>admin login</h3>
+  </header>
+  <section id="adminlogin">
+
+
+
+    <div id="profileContainer">
+      <div id="userProfile" tal:condition="exists:profile">
+        <h2>User Profile</h2>
+        <span tal:content="profile/user_name"></span>
+        <span tal:content="profile/first_name"></span>
+        <span tal:content="profile/last_name"></span>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </div>
+
+
+    <div id="loginFormContainer" tal:condition="php: !Session::get('isLoggedIn')">
+
+      <form id="loginForm">
+        <label for="user_name">Username</label>
+        <br />
+        <input id="user_name" type="text" name="user_name" autofocus="autofocus" />
+        <br/>
+        <br/>
+        <label for="password">Password</label>
+        <br />
+        <input id="password" type="password" name="password" />
+        <br/>
+        <br/>
+        <input id="loginbutton" type="button" value="Login" /><br/>
+        <input id="resetLoginForm" type="reset" value="Reset" />
+
+      </form>
+
+    </div>
+
+    <div id="messages">
+      <ul id="talMessages" tal:condition="php: count(messages) GT 0">
+        <li tal:repeat="msg messages" class="${msg/type}"><span tal:content="msg/text"></span></li>
+      </ul>
+      <ul id="AJAXMessages">
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </section>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="./js/logging.js"></script>
+
+</body>
+
 </html>

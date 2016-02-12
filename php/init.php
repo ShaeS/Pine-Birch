@@ -6,8 +6,12 @@ function loadScripts() {
 $scripts = array('DBconnector.php',
                  'Messages.php',
                  'Parameters.php',
+                 'Session.php',
+                 'ShowUserProfileAction.php',
+                 'UserLoginAction.php',
+                 'UserLogoutAction.php',
                  'ProductManager.php',
-                 'ShoppingCartManager.php',
+                 'UserManager.php',
                  'Utils.php');
 
     $subDir = "src";
