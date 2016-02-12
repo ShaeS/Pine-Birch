@@ -1,64 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
-    <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
-    <link rel="icon" type="image/png" href="../images/favicon.png"/>
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/animsition.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="./js/animsition.min.js"></script>
-    <script src="./js/main.js"></script>
-  </head>
-    
-  <body>
-      <header>
-        <headReplace metal:use-macro="head.xhtml/meta_head"></headReplace>
-      <nav>
-        <ul class="nav">
-          <li><a class="selected animsition-link" href="index.php">store</a></li>
-          <li><a class="animsition-link" href="about.php">about</a></li>
-          <li><a class="animsition-link" href="contact.php">contact</a></li>
-          <li><a class="animsition-link" href="cart.php">cart</a></li>
-        </ul>
-      </nav>
-      
-    <hr/> 
-    </header>
-      
-    <section class="animsition">
-      <div class="styled-select">
-          <select>
-            <option value="all">all</option>
-            <option value="instruments">instruments</option>
-            <option value="vehicles">vehicles</option>
-            <option value="animals">animals</option>
-          </select>
-      </div>
-      <div id="imagewrapper">
-        <ul>
-          <li><img src="./images/car.jpg" /><div><p>Squiggly Toy Car</p><hr/><p>$35.00</p></div></li>
-          <li><img src="./images/dino.jpg" /><div><p>Brontosaurus Rex</p><hr/><p>$42.00</p></div></li>
-          <li><img src="./images/drum.jpg" /><div><p>Triple-Tone Drum</p><hr/><p>$45.00</p></div></li>
-          <li><img src="./images/duck.jpg" /><div><p>Oak Rolling Duck</p><hr/><p>$24.00</p></div></li>
-          <li><img src="./images/elephant.jpg" /><div><p>Cute Bowing Elephant</p><hr/><p>$28.00</p></div></li>
-          <li><img src="./images/hedgehog.jpg" /><div><p>Jerry The Hedgehog</p><hr/><p>$51.00</p></div></li>
-          <li><img src="./images/helicopter.jpg" /><div><p>Dual-Tone Helicopter</p><hr/><p>$46.00</p></div></li>
-          <li><img src="./images/instrument.jpg" /><div><p>Musical Scraper</p><hr/><p>$60.00</p></div></li>
-          <li><img src="./images/instrument2.jpg" /><div><p>Dual-Tone Woodblock</p><hr/><p>$33.00</p></div></li>
-          <li><img src="./images/instrument3.jpg" /><div><p>Wooden Xylophone</p><hr/><p>57.00</p></div></li>
-          <li><img src="./images/truck.jpg" /><div><p>Functioning Excavator</p><hr/><p>$48.00</p></div></li>
-          <li><img src="./images/truck2.jpg" /><div><p>Loghouse Truck</p><hr/><p>$39.00</p></div></li>
-        </ul>
-      </div>
-      <div class="push"></div>
-    </section>
-      
-    <footerReplace metal:use-macro="footer.xhtml/page_footer">
-    </footerReplace>
 
-    <script src="./js/portfolio.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
+  <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animsition.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="./js/animsition.min.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <headReplace metal:use-macro="head.xhtml/meta_head"></headReplace>
+    <nav>
+      <ul class="nav">
+        <li><a class="selected animsition-link" href="index.php">store</a></li>
+        <li><a class="animsition-link" href="about.php">about</a></li>
+        <li><a class="animsition-link" href="contact.php">contact</a></li>
+        <li><a class="animsition-link" href="cart.php">cart</a></li>
+      </ul>
+    </nav>
+
+    <hr/>
+  </header>
+
+  <section class="animsition">
+    <div class="styled-select">
+      <select>
+        <option value="all">all</option>
+        <option value="instruments">instruments</option>
+        <option value="vehicles">vehicles</option>
+        <option value="animals">animals</option>
+      </select>
+    </div>
+    <div id="imagewrapper">
+      <ul id="getproducts">
+
+
+      </ul>
+    </div>
+    <div class="push"></div>
+  </section>
+
+  <footerReplace metal:use-macro="footer.xhtml/page_footer">
+  </footerReplace>
+
+  <script src="./js/portfolio.js"></script>
+</body>
+
 </html>
