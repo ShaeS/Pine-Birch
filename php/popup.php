@@ -19,9 +19,9 @@ loadScripts();
                         <div class='popuptextdiv'>
                           <h2 class='popuptitle'>$name</h2>
                           <hr class='popuphr'>
-                          <p class='popupprice'>$$price</p>
-                          <p class='popupdescription'>$desc</p>
-                        <a href='#' id='startCart' class='popupbutton'>add to cart</a></div>
+                          <p data-sku-price='$sku' class='popupprice'>$$price</p>
+                          <p data-sku-desc='$sku' class='popupdescription'>$desc</p>
+                        <a data-sku-add='$sku' href='#' id='startCart' class='popupbutton'>add to cart</a></div>
                         <span class='closebutton'>x</span>
                       </div>";
 

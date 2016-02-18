@@ -25,7 +25,7 @@ loadScripts();
             $date = $row['dateadded'];
             $stock = $row['stock'];
             $html .= "<tr id='$sku'>
-                        <td id='editcell'><img class='editbutton' src='./assets/edit.png' /></td>
+                        <td id='editcell'><img id='$sku' class='editbutton' src='./assets/edit.png' /></td>
                         <td>$name</td>
                         <td>$$price</td>
                         <td>$date</td>

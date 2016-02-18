@@ -360,16 +360,23 @@ ABOUT PAGE
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-#aboutsection div {
-  
+.woodp {
+  width: 55%;
+  min-width: 300px;
 }
 
-#contactimg {
-  width: 80%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+#aboutsection .imgwood {
+  width: 45%;
+  min-width: 300px;
+}
+
+.imgwood img {
+  width: 100%;
 }
 
 #aboutsection p {
@@ -897,7 +904,7 @@ ADMIN LOGIN
   background-color: #0d0d0d;
   border-style: none;
   border-radius: 2px;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 #loginbutton:hover {
@@ -925,7 +932,7 @@ ADMIN LOGIN
 
 #AJAXMessages {
   padding: 20px 0;
-  font-weight:300;
+  font-weight: 300;
 }
 
 #AJAXMessages li {
@@ -941,7 +948,7 @@ ADMIN PANEL
   border: none;
   background: none;
   color: #fcd42d;
-  padding:0;
+  padding: 0;
 }
 
 #logoutbutton:hover {

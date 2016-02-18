@@ -1,77 +1,162 @@
-/* Set rates + misc */
-var taxRate = 0.05;
-var shippingRate = 15.00; 
-var fadeTime = 300;
+/*<![CDATA[*/
+        $(document).ready(function() {
 
 
-/* Assign actions */
-$('.product-quantity input').change( function() {
-  updateQuantity(this);
-});
 
-$('.product-removal button').click( function() {
-  removeItem(this);
-});
+            // SESSION STORAGE GET ITEMS IF THEY ALREADY EXIST IN SESSION STORAGE
+            function loadShoppingCartItems() {
 
+                var cartData = sessionStorage.getObject('autosave');
 
-/* Recalculate cart */
-function recalculateCart()
-{ 
-  var subtotal = 0;
-  
-  /* Sum up row totals */
-  $('.product').each(function () {
-    subtotal += parseFloat($(this).children('.product-line-price').text());
-  });
-  
-  /* Calculate totals */
-  var tax = subtotal * taxRate;
-  var shipping = (subtotal > 0 ? shippingRate : 0);
-  var total = subtotal + tax + shipping;
-  
-  /* Update totals display */
-  $('.totals-value').fadeOut(fadeTime, function() {
-    $('#cart-subtotal').html(subtotal.toFixed(2));
-    $('#cart-tax').html(tax.toFixed(2));
-    $('#cart-shipping').html(shipping.toFixed(2));
-    $('#cart-total').html(total.toFixed(2));
-    if(total == 0){
-      $('.checkout').fadeOut(fadeTime);
-    }else{
-      $('.checkout').fadeIn(fadeTime);
-    }
-    $('.totals-value').fadeIn(fadeTime);
-  });
-}
+                // if nothing added leave function
+                if(cartData == null) {
+                    return;
+                }
+                var cartDataItems = cartData['items'];
+                var shoppingCartList = $("#shoppingCart");
 
 
-/* Update quantity */
-function updateQuantity(quantityInput)
-{
-  /* Calculate line price */
-  var productRow = $(quantityInput).parent().parent();
-  var price = parseFloat(productRow.children('.product-price').text());
-  var quantity = $(quantityInput).val();
-  var linePrice = price * quantity;
-  
-  /* Update line price display and recalc cart totals */
-  productRow.children('.product-line-price').each(function () {
-    $(this).fadeOut(fadeTime, function() {
-      $(this).text(linePrice.toFixed(2));
-      recalculateCart();
-      $(this).fadeIn(fadeTime);
-    });
-  });  
-}
+                for(var i = 0; i < cartDataItems.length; i++) {
+                    var item = cartDataItems[i];
+                    // sku, qty, date
+                    var sku = item['sku'];
+                    var qty = item['qty'];
+                    var date = item['date'];
+                    var price = item['price'];
+                    var desc = item['desc'];
+                    var subtotal = parseFloat(Math.round((qty * price) * 100) / 100).toFixed(2);
+
+                    var item = "<li data-item-sku='" + sku + "' data-item-qty='" + qty + "' data-item-date='"
+                        + date + "'>" + desc + " " + qty + " x $" + price + " = " + subtotal
+                        + " <input type='button' data-remove-button='remove' value='X'/></li>";
+                    shoppingCartList.append(item);
 
 
-/* Remove item from cart */
-function removeItem(removeButton)
-{
-  /* Remove row from DOM and recalc cart total */
-  var productRow = $(removeButton).parent().parent();
-  productRow.slideUp(fadeTime, function() {
-    productRow.remove();
-    recalculateCart();
-  });
-}
+                }
+                console.log('cart items array, added', cartDataItems);
+            }
+            loadShoppingCartItems();
+
+            
+
+            // remove items from the cart
+            $("#shoppingCart").on("click", "input", function() {
+                // https://api.jquery.com/closest/
+
+
+
+                // WEB STORAGE REMOVE
+                var thisInputSKU = this.parentNode.getAttribute('data-item-sku');
+                var thisInputQty = this.parentNode.getAttribute('data-item-qty');
+                var thisInputDate = this.parentNode.getAttribute('data-item-date');
+
+                var cartData = sessionStorage.getObject('autosave');
+                if(cartData == null) {
+                    return;
+                }
+                var cartDataItems = cartData['items'];
+                for(var i = 0; i < cartDataItems.length; i++) {
+                    var item = cartDataItems[i];
+                    // get the item based on the sku, qty, and date
+                    if(item['sku'] == thisInputSKU && item['date'] == thisInputDate) {
+                        // remove from web storage
+                        cartDataItems.splice(i, 1);
+
+                    }
+                }
+                cartData['items'] = cartDataItems;
+                console.log('cart data stuff', cartData);
+                // clobber the old value
+                sessionStorage.setObject('autosave', cartData);
+
+                this.closest("li").remove();
+
+            });
+
+
+            // start the cart
+            $("#startCart").click(function() {
+                console.log("Start cart.");
+                $.ajax({
+                    url: "./shoppingcart.php",
+                    type: "POST",
+                    dataType: 'json',
+                    data: {action: "startcart"},
+                    success: function(returnedData) {
+                        console.log("cart start response: ", returnedData);
+
+                        // WEB STORAGE - SESSION STORAGE
+                        //var sessionID = returnedData['s_id'];
+                        sessionStorage.setObject('autosave', {items: []});
+
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+            });
+
+
+            // cancel the cart
+            $("#cancelCart").click(function() {
+
+                console.log("End cart.");
+                $.ajax({
+                    url: "./shoppingcart.php",
+                    type: "POST",
+                    dataType: 'json',
+                    data: {action: "cancelcart"},
+                    success: function(returnedData) {
+                        console.log("cart cancel response: ", returnedData);
+
+
+                        // SESSION STORAGE - CLEAR THE SESSION
+                        sessionStorage.clear();
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+                var shoppingCartList = $("#shoppingCart").html("");
+            });
+
+            // cancel the cart
+            $("#checkoutcart").click(function() {
+
+                // retrieve all of the items from the cart:
+                var items = $("#shoppingCart li");
+                var itemArray = [];
+                $.each(items, function(key, value) {
+
+                    var item = {sku: value.getAttribute("data-item-sku"),
+                        qty: value.getAttribute("data-item-qty")};
+                    itemArray.push(item);
+                });
+                var itemsAsJSON = JSON.stringify(itemArray);
+                console.log("itemsAsJSON", itemsAsJSON);
+
+
+                console.log("Check out cart with the following items", itemArray);
+                $.ajax({
+                    url: "./shoppingcart.php",
+                    type: "POST",
+                    dataType: 'json',
+                    data: {action: "checkoutcart", items: itemsAsJSON},
+                    success: function(returnedData) {
+                        console.log("cart check out response: ", returnedData);
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+                var shoppingCartList = $("#shoppingCart").html("");
+            });
+
+
+
+
+        });
+        /*]]>*/
