@@ -2,11 +2,12 @@
 $(document).ready(function () {
 
 
-
+function loadShoppingCartItems() {
   // if nothing added leave function
   if (sessionStorage.autosave == null) {
     return;
   }
+  console.log(typeof(sessionStorage.autosave));
   var cartData = $.parseJSON(sessionStorage.autosave);
   var cartDataItems = cartData['items'];
   var shoppingCartList = $("#shoppingCart");
@@ -37,7 +38,8 @@ $(document).ready(function () {
   console.log('cart items array, added', cartDataItems);
 
 
-
+}
+loadShoppingCartItems();
 
   // remove items from the cart
   $("#shoppingCart").on("click", "button", function () {
@@ -46,28 +48,28 @@ $(document).ready(function () {
 
 
     // WEB STORAGE REMOVE
-    var thisInputSKU = this.parentNode.getAttribute('data-item-sku');
-    var thisInputQty = this.parentNode.getAttribute('data-item-qty');
-    var thisInputDate = this.parentNode.getAttribute('data-item-date');
 
     var cartData = $.parseJSON(sessionStorage.autosave);
     if (cartData == null) {
       return;
     }
     var cartDataItems = cartData['items'];
+    
+    var thisInputSKU = this.closest("article").getAttribute('data-item-sku');
+    var thisInputQty = this.closest("article").getAttribute('data-item-qty');
+    var thisInputDate = this.closest("article").getAttribute('data-item-date');
+    
     for (var i = 0; i < cartDataItems.length; i++) {
       var item = cartDataItems[i];
       // get the item based on the sku, qty, and date
       if (item['sku'] == thisInputSKU && item['date'] == thisInputDate) {
         // remove from web storage
         cartDataItems.splice(i, 1);
-
       }
     }
-    cartData['items'] = cartDataItems;
-    console.log('cart data stuff', cartData);
     // clobber the old value
-    sessionStorage.autosave
+    cartstring = JSON.stringify(cartDataItems);
+    sessionStorage.autosave = '{"items":'+cartstring+'}';
 
     this.closest("article").remove();
 
