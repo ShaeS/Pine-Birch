@@ -307,7 +307,17 @@ IMAGE GALLERY POP UP
 }
 
 .popupprice {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.popupstock {
+  padding-bottom: 10px;
+  font-weight: bold;
+  display:inline;
+}
+
+.popupspan {
+  font-weight: bold;
 }
 
 .popuphr {
@@ -316,12 +326,14 @@ IMAGE GALLERY POP UP
 
 .popupdescription {
   line-height: 2em;
-  padding: 10px 10% 40px;
+  padding: 0;
 }
 
 .popupbutton {
   color: #fcd42d;
   text-decoration: none;
+  display: block;
+  margin-top: 10px;
 }
 
 .popupbutton:hover {
@@ -503,12 +515,6 @@ MY CART PAGE
   zoom: 1;
 }
 
-.product .product-price:before,
-.product .product-line-price:before,
-.totals-value:before {
-  content: '$';
-}
-
 .shopping-cart {
   margin-top: -45px;
 }
@@ -671,9 +677,7 @@ MY CART PAGE
     width: auto;
     margin-top: 10px;
   }
-  .product .product-line-price:before {
-    content: 'Item Total: $';
-  }
+
   .totals .totals-item label {
     width: 60%;
   }
@@ -698,12 +702,6 @@ MY CART PAGE
   zoom: 1;
 }
 
-.product .product-price:before,
-.product .product-line-price:before,
-.totals-value:before {
-  content: '$';
-}
-
 .shopping-cart {
   margin-top: -45px;
 }
@@ -866,9 +864,7 @@ MY CART PAGE
     width: auto;
     margin-top: 10px;
   }
-  .product .product-line-price:before {
-    content: 'Item Total: $';
-  }
+
   .totals .totals-item label {
     width: 60%;
   }
@@ -1025,10 +1021,6 @@ ADMIN PANEL
   padding: 20px 0 60px;
 }
 
-.popuptitle {
-  margin-top: 60px;
-}
-
 #pdescription {
   width: 100%;
   border-color: #d3d3d3;
@@ -1117,7 +1109,7 @@ IMAGE GALLERY
     width: 50%;
   }
   .popupdescription {
-    padding: 10px 0 40px;
+    padding: 0;
   }
   .closebutton {
     right: 10px;

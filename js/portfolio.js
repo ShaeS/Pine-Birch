@@ -37,8 +37,7 @@ function loadProducts() {
               });
 
               $(".popupitem").on('click', 'a[data-sku-add]', function () {
-                  console.log("Start cart.");
-                  sessionStorage.cart = 4;
+                  var me = this;
                   $.ajax({
                     url: "./php/shoppingcart.php",
                     type: "POST",
@@ -49,37 +48,56 @@ function loadProducts() {
                     },
                     success: function (returnedData) {
                       
-                      console.log("cart start response: ", returnedData);
 
 
                       // get the sku
-                      var sku = this.getAttribute("data-sku-add");
+                      var sku = me.getAttribute("data-sku-add");
+                      var image = $("img[data-sku-image='" + sku + "']").attr("src");
+                      var title = $("h2[data-sku-title='" + sku + "']").text();
                       var price = $("p[data-sku-price='" + sku + "']").text();
-                      var desc = $("p[data-sku-desc='" + sku + "']").text();
-                      console.log(desc, "quantity", qty, "price", price);
+                      var stock = $("p[data-sku-stock='" + sku + "']").text();
+                      console.log(stock);
 
                       var shoppingCartList = $("#shoppingCart");
 
 
                       // ALTERED FOR WEB STORAGE
                       var aDate = new Date();
-                      var item = "<div class='product'><div class='product-image'><img src='./images/hedgehog.jpg' /></div><div class='product-details'><div class='product-title'>"+desc+"</div></div><div class='product-price'>"+price+"</div><div class='product-quantity'><input type='number' value='1' min='1' /></div><div class='product-removal'><button data-remove-button='remove' class='remove-product'>Remove</button></div><div class='product-line-price'>"+price+"</div></div>";
+                      var item = "<div class='product'><div class='product-image'><img src='./images/hedgehog.jpg' /></div><div class='product-details'><div class='product-title'>"+title+"</div></div><div class='product-price'>"+price+"</div><div class='product-quantity'><input type='number' value='1' min='1' /></div><div class='product-removal'><button data-remove-button='remove' class='remove-product'>Remove</button></div><div class='product-line-price'>"+price+"</div></div>";
                       shoppingCartList.append(item);
 
 
                       // SESSION STORAGE - SAVE SKU AND QTY AS AN OBJECT IN THE
                       // ARRAY INSIDE OF THE AUTOSAVE OBJECT
+                      
                       var cartData = sessionStorage.getObject('autosave');
+                      
                       if (cartData == null) {
-                        return;
+                        //return;
+                        cartData = {items: []};
                       }
                       var item = {
                         'sku': sku,
-                        date: aDate.getTime(),
-                        'desc': desc,
-                        'price': price
+                        'image': image,
+                        'title': title,
+                        'price': price,
+                        'stock': stock,
+                        'date': aDate,
+                        'qty': 1
                       };
-                      cartData['items'].push(item);
+                      
+                      var same = false;
+                      for (var i = 0; i<cartData['items'].length; i++) {
+                        console.log(item.sku);
+                        if (cartData.items[i].sku == item.sku) {
+                          console.log("already added");
+                          same = true; 
+                        }
+                      }
+                      
+                      if(same == false) {
+                        cartData['items'].push(item);
+                      }
                       // clobber the old value
                       sessionStorage.setObject('autosave', cartData);
 

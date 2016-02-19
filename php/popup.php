@@ -11,16 +11,18 @@ loadScripts();
         $html = "";
             $image = $rows['image'];
             $name = $rows['name'];
+            $stock = $rows['stock'];
             $sku = $rows['SKU'];
             $price = $rows['price'];
             $desc = $rows['description'];
             $html .= "<div class='popupitem'>
-                        <img class='popupimg' src='$image'>
+                        <img data-sku-image='$sku' class='popupimg' src='$image'>
                         <div class='popuptextdiv'>
-                          <h2 class='popuptitle'>$name</h2>
+                          <h2 data-sku-title='$sku' class='popuptitle'>$name</h2>
                           <hr class='popuphr'>
                           <p data-sku-price='$sku' class='popupprice'>$$price</p>
                           <p data-sku-desc='$sku' class='popupdescription'>$desc</p>
+                          <p class='popupstock' data-sku-stock='$sku'>$stock</p><span class='popupspan'> in stock</span>
                         <a data-sku-add='$sku' href='#' id='startCart' class='popupbutton'>add to cart</a></div>
                         <span class='closebutton'>x</span>
                       </div>";

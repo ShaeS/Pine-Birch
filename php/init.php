@@ -11,6 +11,7 @@ $scripts = array('DBconnector.php',
                  'UserLoginAction.php',
                  'UserLogoutAction.php',
                  'ProductManager.php',
+                 'ShoppingCartManager.php',
                  'UserManager.php',
                  'Utils.php');
 
