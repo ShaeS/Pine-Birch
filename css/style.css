@@ -377,26 +377,27 @@ ABOUT PAGE
   flex-wrap: wrap;
 }
 
-.woodp {
-  width: 55%;
-  min-width: 300px;
+.images {
+   margin:0 auto; 
 }
 
-#aboutsection .imgwood {
-  width: 45%;
-  min-width: 300px;
-}
-
-.imgwood img {
-  width: 100%;
+.profilephotos {
+    width:250px;  
+    padding-bottom:20px;
 }
 
 #aboutsection p {
   margin: 0 auto;
   padding: 1% 5%;
   line-height: 2em;
+  width:80%;
+
 }
 
+.abouttitle {
+ text-align: center;
+ margin-bottom:-5px;
+}
 
 /********************************************
 CONTACT PAGE
@@ -1133,6 +1134,12 @@ ABOUT PAGE
     width: 70%;
     margin: 0 auto;
   }
+    
+    .profilephotos {
+    width:170px;  
+    padding-bottom:20px;
+}
+
   /********************************************
 ADMIN PANEL
 ********************************************/

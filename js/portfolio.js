@@ -36,6 +36,7 @@ function loadProducts() {
                 $(popupscreen).remove();
               });
 
+
               $(".popupitem").on('click', 'a[data-sku-add]', function () {
                   var me = this;
                   $.ajax({
@@ -100,9 +101,9 @@ function loadProducts() {
                       }
                       // clobber the old value
                       sessionStorage.setObject('autosave', cartData);
-
-
-             
+    
+                        $(popupscreen).remove();
+   
 
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
