@@ -443,6 +443,9 @@ label {
   transition: all 200ms ease 0s;
 }
 
+ .contactcenter {
+  text-align:center;
+}
 
 /********************************************
 MY CART PAGE
