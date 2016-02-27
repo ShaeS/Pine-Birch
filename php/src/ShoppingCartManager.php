@@ -39,11 +39,7 @@ class ShoppingCartManager {
             $qty = $item['qty'];
 
             // need to look up the ID of the product based on the SKU
-            $sql = "SELECT ID FROM product WHERE SKU = '$sku'";
-            $rows = $this->db->query($sql);
-            $product_id = $rows[0]['ID'];
-            $sql = "INSERT INTO cart_product (product_id, cart_id, quantity)
-                VALUES ($product_id, $cart_id, $qty)";
+            $sql = "UPDATE products SET stock = stock - $qty WHERE SKU = '$sku'";
             $this->db->affectRows($sql);
         }
 

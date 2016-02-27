@@ -28,7 +28,7 @@ loadScripts();
                           <textarea id='pdescription'>$desc</textarea>
                           <label id='uploadlabel' for='uplaodimg'>image:</label>
                           <input id='uploadimg' type='file' placeholder='choose image'>
-                          <input id='submitedit' type='submit'>
+                          <input id='$sku' class='submitedit' type='submit'>
                         </form>
                         <span class='closebutton'>x</span>
                       </div>";

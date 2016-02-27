@@ -68,7 +68,7 @@ loadScripts();
                 }
 
                 // turn the JSON into an array of arrays (true means arrays and not objects)
-                $items = json_decode($_POST['items'], true);
+                $items = $_POST['stuff'];
                 $scm->addItemsToCart($items, $_SESSION['id']);
 
                 $affectedRows = $scm->checkoutCart($_SESSION['id']);

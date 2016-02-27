@@ -30,6 +30,12 @@ class ProductManager {
 
         return null;
     }
+  
+    public function updateProducts($SKU, $NAME, $PRICE, $STOCK, $DESC) {
+        $sql = "UPDATE products SET name = '$NAME', price = $PRICE, stock = $STOCK, description = '$DESC' WHERE SKU = '$SKU'";
+        $rows = $this->db->query($sql);
+        return $rows;
+    }
 
 
 }

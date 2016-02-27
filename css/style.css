@@ -410,6 +410,7 @@ form {
 
 input {
   outline-color: #f6d42d;
+  width: 100%;
 }
 
 textarea {
@@ -1055,7 +1056,7 @@ ADMIN PANEL
   text-align: left;
 }
 
-#submitedit {
+.submitedit {
   padding-top: 1%;
   padding-bottom: 1%;
   color: white;
@@ -1064,7 +1065,7 @@ ADMIN PANEL
   border-radius: 2px;
 }
 
-#submitedit:hover {
+.submitedit:hover {
   background-color: #4d4d4d;
   -webkit-transition: all 300ms ease 0s;
   -webkit-transition: all 200ms ease 0s;

@@ -14,14 +14,6 @@ $(document).ready(function() {
                               '-o-animation-duration'
                             ]
   });
-  
-  
-  $('#ui-spinner-button').click(function () {
-        //console.log($(this).val());
-        var number = parseInt($(this).val());
-        var price = parseFloat($(this).attr("data-price").replace("$", ""));
-        console.log(number, price);
-        $("#price").html("$" + number * price);
-      });
+
   
 });
