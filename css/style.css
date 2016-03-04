@@ -65,14 +65,23 @@ header h3 {
 }
 
 #name {
-    font-size:1.3em;
+    font-size:1.2em;
 }
 
 .addproduct {
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
     justify-content:space-between;
     width:70%;
-    margin:5px auto;
+    margin:0 auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 

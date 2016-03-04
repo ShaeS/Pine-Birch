@@ -36,6 +36,12 @@ class ProductManager {
         $rows = $this->db->query($sql);
         return $rows;
     }
+  
+      public function addProducts($SKU, $NAME, $PRICE, $STOCK, $DESC) {
+        $sql = "INSERT INTO products (SKU, name, price, stock, description, image, dateadded, category) VALUES ('$SKU', '$NAME', $PRICE, $STOCK, '$DESC', './images/placeholder.jpg', 'today', 0)";
+        $rows = $this->db->query($sql);
+        return $rows;
+    }
 
 
 }

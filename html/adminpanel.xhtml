@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
-    <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
-    <link rel="icon" type="image/png" href="../images/favicon.png" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>PINE<span>&amp;</span>BIRCH</h1>
-      <h3>admin panel</h3>
-      <hr />
-      <div class='addproduct'>   
-            <span id='name'><b>Greetings:</b> Name of person</span>
-            <span id='thex'>+</span>
-      </div>   
-    </header>
-    <section>
-      <div id="itemcontainer">
-        <table id="getAdminProducts">
-          
-          
-        </table>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
+  <title>Pine&amp;Birch | Handcrafted Wooden Toys</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>PINE<span>&amp;</span>BIRCH</h1>
+    <h3>admin panel</h3>
+    <hr />
+    <div class='addproduct'>
+      <div id='name'>
+        <span><b>Greetings: </b></span>
+        <span tal:content="profile/first_name"></span>
+        <span tal:content="profile/last_name"></span>
       </div>
-      
-      <div class="push"></div>
-    </section>
-    <footer>
-        <a id="gotosite" href="./index.php" target="_blank">go to site</a><br/>
-        
-<!-- tal:condition="exists: isLoggedIn" -->
+      <span id='thex'>+</span>
+    </div>
+  </header>
+  <section>
+    <div id="itemcontainer">
+      <table id="getAdminProducts">
 
-      <div id="logoutFormContainer" tal:condition="php: Session::get('isLoggedIn')">
 
-        <form id="logoutForm">
-            <input id="logoutbutton" type="button" value="logout"/>
-            <input type="hidden" value="logout" name="logoutButton"/>
-        </form>
+      </table>
+    </div>
 
-      </div>
-    </footer>
-    <script src="./js/adminproducts.js"></script>
-    <script src="./js/logging.js"></script>
-  </body>
+    <div class="push"></div>
+  </section>
+  <footer>
+    <a id="gotosite" href="./index.php" target="_blank">go to site</a>
+    <br/>
+
+    <!-- tal:condition="exists: isLoggedIn" -->
+
+    <div id="logoutFormContainer" tal:condition="php: Session::get('isLoggedIn')">
+
+      <form id="logoutForm">
+        <input id="logoutbutton" type="button" value="logout" />
+        <input type="hidden" value="logout" name="logoutButton" />
+      </form>
+
+    </div>
+  </footer>
+  <script src="./js/adminproducts.js"></script>
+</body>
+
 </html>
