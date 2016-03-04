@@ -64,8 +64,31 @@ header h3 {
   font-weight: 100;
 }
 
+#name {
+    font-size:1.3em;
+}
+
+.addproduct {
+    display:flex;
+    justify-content:space-between;
+    width:70%;
+    margin:5px auto;
+    align-items: center;
+}
+
+#thex {
+    display: inline; 
+    font-size:3em;
+    font-weight:bold;
+}
+
+#thex:hover {
+    color:#fcd42d;
+    cursor:pointer;
+}
+
 header hr {
-  width: 50%;
+    width: 50%;
 }
 
 
