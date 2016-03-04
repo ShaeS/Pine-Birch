@@ -31,8 +31,9 @@ class UserLoginAction {
             $user_name = $this->params->getValue('user_name');
             $user_password = $this->params->getValue('password');
             if($user_name != null && $user_password != null) {
+              $encoded_password = md5($user_password);
                 // check if user name and password are correct
-                $usr = $this->userManager->findUser($user_name, $user_password);
+                $usr = $this->userManager->findUser($user_name, $encoded_password);
                 if($usr != null) {
                     // log user in
                     Session::set("user_name", $usr['user_name']);

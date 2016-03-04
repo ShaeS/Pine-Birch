@@ -43,22 +43,6 @@
               } else {
                 // you're in, show profile
                 document.location.href = './adminpanel.php';
-                //                            console.log(returnedData['user']);
-                //                            $("#profileContainer").html("<div id='userProfile'>"
-                //                                + "<h2>User Profile</h2>\n"
-                //                                + "<span>" + returnedData['user']['user_name'] + "</span> "
-                //                                + "<span>" + returnedData['user']['first_name'] + "</span> "
-                //                                + "<span>" + returnedData['user']['last_name'] + "</span>"
-                //                                +"<br/><br/><br/></div>");
-                //                            $("#AJAXMessages").html("");
-                //
-                //                            // remove login form
-                //                            $("#loginForm").remove();
-                //
-                //                            // create logout form
-                //                            $("#loginFormContainer").after('<div id="logoutFormContainer"><form id="logoutForm"><fieldset><legend>Logout Form</legend><label for="password">Password: </label><input id="logoutbutton" type="button" value="Logout"/><input type="hidden" value="logout" name="logoutButton"/></fieldset></form></div>');
-                //                            $("#logoutbutton").bind("click", doLogout);
-
               }
 
 
