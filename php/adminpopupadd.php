@@ -18,16 +18,18 @@ loadScripts();
             $html .= "<div class='popupitem2'>
                         <h2 class='popuptitle'>Add a Product</h2>
                         <form class='popupform'>
+                          <label for='psku'>SKU:</label>
+                          <input id='psku' type='text'>
                           <label for='pname'>name:</label>
-                          <input value='$name' id='pname' type='text'>
+                          <input id='pname' type='text'>
                           <label for='pprice'>price:</label>
-                          <input value='$price' id='pprice' type='text'>
+                          <input id='pprice' type='text'>
                           <label for='pstock'>stock:</label>
-                          <input value='$stock' id='pstock' type='text'>
+                          <input id='pstock' type='text'>
+                          <label for='ppath'>Image Url:</label>
+                          <input id='ppath' type='text'>
                           <label for='pdescription'>description:</label>
-                          <textarea id='pdescription'>$desc</textarea>
-                          <label id='uploadlabel' for='uplaodimg'>image:</label>
-                          <input id='uploadimg' type='file' placeholder='choose image'>
+                          <textarea id='pdescription'></textarea>
                           <input id='$sku' class='submitadd' type='submit'>
                         </form>
                         <span class='closebutton'>x</span>

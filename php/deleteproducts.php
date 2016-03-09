@@ -7,7 +7,7 @@ loadScripts();
 
     if(Utils::isGET()) {
         $pm = new ProductManager();
-        $rows = $pm->addProducts($_GET['sku'],$_GET['name'],$_GET['price'],$_GET['stock'],$_GET['path'],$_GET['description']);
+        $rows = $pm->deleteProducts($_GET['sku']);
         
     } else {
         $data = array("status" => "error", "msg" => "Only GET allowed.");

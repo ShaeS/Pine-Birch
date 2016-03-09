@@ -26,9 +26,8 @@ loadScripts();
                           <input value='$stock' id='pstock' type='text'>
                           <label for='pdescription'>description:</label>
                           <textarea id='pdescription'>$desc</textarea>
-                          <label id='uploadlabel' for='uplaodimg'>image:</label>
-                          <input id='uploadimg' type='file' placeholder='choose image'>
                           <input id='$sku' class='submitedit' type='submit'>
+                          <input id='$sku' class='updatedelete' value='Delete' type='submit'>
                         </form>
                         <span class='closebutton'>x</span>
                       </div>";

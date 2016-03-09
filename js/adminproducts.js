@@ -1,3 +1,7 @@
+$(document).ready(function () {
+
+});
+
 function loadProducts() {
   $.ajax({
     url: "./php/adminproducts.php",
@@ -43,6 +47,22 @@ function loadProducts() {
               });
             });
 
+            $(".updatedelete").click(function (e) {
+
+
+              $.ajax({
+                url: "./php/deleteproducts.php",
+                type: "GET",
+                dataType: 'json',
+                data: {
+                  sku: $(this).attr("id")
+                },
+                success: function (returned) {
+                  console.log(returned);
+                }
+              });
+            });
+
           }
         });
 
@@ -73,11 +93,13 @@ function loadProducts() {
                 type: "GET",
                 dataType: 'json',
                 data: {
-                  sku: $(this).attr("id"),
+                  sku: $(this).siblings("#psku").val(),
                   name: $(this).siblings("#pname").val(),
                   price: $(this).siblings("#pprice").val(),
                   stock: $(this).siblings("#pstock").val(),
+                  path: $(this).siblings("#ppath").val(),
                   description: $(this).siblings("#pdescription").val()
+
                 },
                 success: function (returned) {
                   console.log(returned);
@@ -96,6 +118,8 @@ function loadProducts() {
   });
 
 }
+
+
 
 
 
